@@ -353,6 +353,33 @@ namespace MetroFramework.Forms
 
             e.Graphics.Clear(backColor);
 
+            if (BackgroundImage != null)
+            {
+                switch (BackgroundImageLayout)
+                {
+                    case ImageLayout.Stretch:
+                        Image img = (Image)new Bitmap(BackgroundImage, this.Size.Width, this.Size.Height);
+                        
+                        e.Graphics.DrawImage(img,0,0);
+                        break;
+                    case ImageLayout.Tile:
+                        int imagesonx = (int) Math.Ceiling((decimal)(this.Size.Width / BackgroundImage.Width))+1;
+                        int imagesony = (int)Math.Ceiling((decimal)(this.Size.Height / BackgroundImage.Height)) + 1;
+                        for (int x = 0;x < imagesonx; x++)
+                        {
+                            for (int y = 0;y < imagesony; y++)
+                            {
+                                e.Graphics.DrawImage(BackgroundImage, x* BackgroundImage.Width, y* BackgroundImage.Height);
+                            }
+                        }
+                        break;
+                    case ImageLayout.Center:
+                        e.Graphics.DrawImage(BackgroundImage, (this.Size.Width / 2)-(BackgroundImage.Width/2), (this.Size.Height / 2) - (BackgroundImage.Height/2));
+                        break;
+                }
+                
+            }
+
             using (SolidBrush b = MetroPaint.GetStyleBrush(Style))
             {
                 Rectangle topRect = new Rectangle(0, 0, Width, borderWidth);
