@@ -376,6 +376,29 @@ namespace MetroFramework.Forms
                     case ImageLayout.Center:
                         e.Graphics.DrawImage(BackgroundImage, (this.Size.Width / 2)-(BackgroundImage.Width/2), (this.Size.Height / 2) - (BackgroundImage.Height/2));
                         break;
+                    case ImageLayout.Zoom:
+                        double wth = ((double)this.Size.Width / BackgroundImage.Width);
+                        double hit = ((double)this.Size.Height / BackgroundImage.Height);
+                        double zoomx = wth;
+                        double zoomy = hit;
+                        if (zoomx == 0) { zoomx = 1; }
+                        if (zoomy == 0) { zoomy = 1; }
+                        double multby = 0;
+                        if (zoomx > zoomy)
+                        {
+                            multby = zoomy;
+                        }else
+                        {
+                            multby = zoomx;
+                        }
+                        int multx = (int)(BackgroundImage.Size.Width * multby);
+                        int multy = (int)(BackgroundImage.Size.Height * multby);
+                        Image zoomimg = (Image)new Bitmap(BackgroundImage,multx,multy);
+                        e.Graphics.DrawImage(zoomimg, (this.Size.Width / 2) - (multx/2), (this.Size.Height / 2) - (multy/2));
+                        break;
+                    case ImageLayout.None
+                        e.Graphics.DrawImage(BackgroundImage, 0, 0);
+                        break;
                 }
                 
             }
