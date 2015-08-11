@@ -89,5 +89,10 @@ namespace MetroFramework.Demo
         {
             metroTextBox2.Focus();
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
