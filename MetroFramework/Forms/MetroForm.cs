@@ -396,7 +396,7 @@ namespace MetroFramework.Forms
                         Image zoomimg = (Image)new Bitmap(BackgroundImage,multx,multy);
                         e.Graphics.DrawImage(zoomimg, (this.Size.Width / 2) - (multx/2), (this.Size.Height / 2) - (multy/2));
                         break;
-                    case ImageLayout.None
+                    case ImageLayout.None:
                         e.Graphics.DrawImage(BackgroundImage, 0, 0);
                         break;
                 }
