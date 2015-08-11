@@ -732,7 +732,7 @@
             this.metroTextBox4.Location = new System.Drawing.Point(342, 106);
             this.metroTextBox4.MaxLength = 32767;
             this.metroTextBox4.Name = "metroTextBox4";
-            this.metroTextBox4.PasswordChar = '\0';
+            //this.metroTextBox4.PasswordChar = '\0';
             this.metroTextBox4.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.metroTextBox4.SelectedText = "";
             this.metroTextBox4.Size = new System.Drawing.Size(171, 22);
@@ -749,7 +749,7 @@
             this.metroTextBox3.MaxLength = 32767;
             this.metroTextBox3.Multiline = true;
             this.metroTextBox3.Name = "metroTextBox3";
-            this.metroTextBox3.PasswordChar = '\0';
+            //this.metroTextBox3.PasswordChar = '\0';
             this.metroTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.metroTextBox3.SelectedText = "";
             this.metroTextBox3.Size = new System.Drawing.Size(171, 91);
@@ -766,7 +766,7 @@
             this.metroTextBox2.Location = new System.Drawing.Point(342, 78);
             this.metroTextBox2.MaxLength = 32767;
             this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.PasswordChar = '\0';
+            //this.metroTextBox2.PasswordChar = '\0';
             this.metroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.metroTextBox2.SelectedText = "";
             this.metroTextBox2.Size = new System.Drawing.Size(171, 22);
@@ -863,7 +863,7 @@
             this.metroTextBox1.Location = new System.Drawing.Point(342, 50);
             this.metroTextBox1.MaxLength = 32767;
             this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
+            //this.metroTextBox1.PasswordChar = '\0';
             this.metroTextBox1.PromptText = "With Placeholder support!";
             this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.metroTextBox1.SelectedText = "";
